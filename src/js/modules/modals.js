@@ -1,6 +1,5 @@
-const modals = () => {
+const modals = (modalBtnSelector, modalElemSelector, modalCloseClass) => {
 
-    function bindElems(modalBtnSelector, modalElemSelector, modalCloseClass) {
         const modalBtn = document.querySelectorAll(modalBtnSelector),
               modalElem = document.querySelector(modalElemSelector);
 
@@ -23,11 +22,10 @@ const modals = () => {
         });
 
         modalElem.addEventListener('click', (e) => {
-            if (e.target === modalElem || e.target.offsetParent.className === modalCloseClass) {
+            if (e.target === modalElem || e.target.parentNode.className === modalCloseClass) {
                 modalClose();
             }
         });
-    }
 
     function openModalByTime(modalElemSelector, time) {
         setTimeout(() => {
@@ -36,10 +34,7 @@ const modals = () => {
         }, time);
     }
     
-    openModalByTime('.popup', 2000);
-    bindElems('.popup_engineer_btn', '.popup_engineer', 'popup_close');
-    bindElems('.phone_link', '.popup', 'popup_close');
-    bindElems('.glazing_price_btn', '.popup_calc', 'popup_calc_close');
+    //openModalByTime('.popup', 60000);
 };
 
 export default modals;
