@@ -1,4 +1,6 @@
-const forms = () => {
+import formClearer from "./formClearer";
+
+const forms = (dataClient) => {
     const formsElem = document.querySelectorAll('form'),
           phoneInputs = document.querySelectorAll('input[name="user_phone"]');
                   
@@ -47,8 +49,25 @@ const forms = () => {
 
 
             const formData = new FormData(form),
-                  object = Object.fromEntries((formData.entries())),
-                  json = JSON.stringify(object);
+                  object = Object.fromEntries((formData.entries()));
+
+            if(form.getAttribute('data-form') === 'calc_end') {
+                for (let key in dataClient) {
+                    object[key] = dataClient[key];
+                }
+
+                let formObject = {
+                    tabs: ['.balcon_icons_img', '.big_img img', 'do_image_more'],
+                    inputs: ['#width', '#height'],
+                    select: ['#view_type'],
+                    checkbox: ['name="checkbox-test"']
+                };
+
+                console.log(formObject);
+                formClearer(formObject);
+            }
+
+            const json = JSON.stringify(object);
 
             postData('http://localhost:3000/requests', json)
                 .then(data => {
