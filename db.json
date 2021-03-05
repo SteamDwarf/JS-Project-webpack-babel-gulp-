@@ -7,116 +7,122 @@
       "balconType": "Тип2",
       "width": "12",
       "height": "25",
-      "profile": "tree",
-      "typeGlazing": "cold",
+      "profile": "french",
+      "typeGlazing": "warm",
       "id": 1
     },
     {
       "user_name": "Dima",
-      "user_phone": "123",
-      "balconType": "Тип2",
-      "width": "12",
-      "height": "25",
-      "profile": "french",
-      "typeGlazing": "cold",
+      "user_phone": "74578",
       "id": 2
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип2",
-      "width": "12",
-      "height": "25",
-      "profile": "tree",
-      "typeGlazing": "cold",
+      "type": "Тип2",
       "id": 3
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип4",
-      "width": "12",
-      "height": "25",
-      "profile": "tree",
-      "typeGlazing": "cold",
+      "type": "Тип2",
       "id": 4
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип3",
+      "type": "Тип2",
       "width": "12",
       "height": "25",
-      "profile": "tree",
-      "typeGlazing": "cold",
       "id": 5
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип4",
+      "type": "Тип2",
       "width": "12",
       "height": "25",
-      "profile": "aluminum",
-      "typeGlazing": "cold",
+      "profile": "overhang",
       "id": 6
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип2",
+      "type": "Тип2",
       "width": "12",
       "height": "25",
-      "profile": "tree",
+      "profile": "overhang",
+      "field": "cold",
       "id": 7
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип3",
+      "type": "Тип2",
       "width": "12",
       "height": "25",
-      "profile": "tree",
+      "glazing": "warm",
+      "profile": "overhang",
       "id": 8
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип3",
+      "type": "Тип2",
       "width": "12",
       "height": "25",
-      "profile": "tree",
-      "typeGlazing": "cold",
+      "glazing": "cold",
       "id": 9
     },
     {
       "user_name": "Dima",
-      "user_phone": "123",
-      "balconType": "Тип3",
+      "user_phone": "74578",
+      "type": "Тип3",
+      "glazing": "warm",
       "width": "12",
       "height": "25",
       "profile": "overhang",
-      "typeGlazing": "cold",
       "id": 10
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип2",
-      "width": "",
-      "height": "",
-      "profile": "tree",
+      "type": "Тип4",
+      "glazing": "cold",
+      "width": "12",
+      "height": "25",
+      "profile": "plastic",
       "id": 11
     },
     {
       "user_name": "Dima",
       "user_phone": "123",
-      "balconType": "Тип2",
+      "type": "Тип2",
       "width": "12",
       "height": "25",
-      "profile": "french",
-      "typeGlazing": "cold",
+      "profile": "plastic",
+      "glazing": "cold",
       "id": 12
+    },
+    {
+      "user_name": "Dima",
+      "user_phone": "74578",
+      "id": 13
+    },
+    {
+      "user_name": "Dima",
+      "user_phone": "74578",
+      "type": "Тип2",
+      "width": "12",
+      "height": "25",
+      "profile": "overhang",
+      "glazing": "cold",
+      "id": 14
+    },
+    {
+      "user_name": "Dima",
+      "user_phone": "123",
+      "id": 15
     }
   ]
 }

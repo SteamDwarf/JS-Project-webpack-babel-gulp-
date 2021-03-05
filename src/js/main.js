@@ -4,11 +4,15 @@ import tabs from './modules/tabs';
 import forms from './modules/forms';
 import calc from './modules/calc';
 import checkNumInputs from './modules/checkNumInputs';
+import timer from './modules/timer';
+import imagesShow from './modules/images';
 
 
 window.addEventListener('DOMContentLoaded', () => {
+    "use strict";
 
     let data = {};
+    let deadline = '2021-03-15';
 
     modals('.popup_engineer_btn', '.popup_engineer', 'popup_close');
     modals('.phone_link', '.popup', 'popup_close');
@@ -25,4 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
     calc(data);
     forms(data);
+
+    timer('#timer', deadline);
+    imagesShow();
 });

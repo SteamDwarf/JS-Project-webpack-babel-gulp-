@@ -606,6 +606,16 @@ textarea:focus {
   opacity: 1;
 }
 
+.modal_image {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal_image img {
+  max-width: 700px;
+  max-height: 700px;
+}
+
 /*Guarantees*/
 .guarantees {
   padding: 6rem 0 1rem;
@@ -829,7 +839,8 @@ textarea:focus {
 /*Modals*/
 .popup,
 .popup_engineer,
-.popup_calc_end {
+.popup_calc_end,
+.popup_image {
   display: none;
   position: fixed;
   top: 0;

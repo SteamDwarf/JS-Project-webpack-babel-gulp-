@@ -1,51 +1,38 @@
-const calc = (data) => {
-    const balconsImg = document.querySelectorAll('.balcon_icons_img'),
-          firstCalcModal = document.querySelector('.popup_calc'),
-          secondCalcModal = document.querySelector('.popup_calc_profile'),
-          firstNextButton = firstCalcModal.querySelector('.popup_calc_button'),
-          secondNextButton = secondCalcModal.querySelector('.popup_calc_profile_button'),
-          inputs = firstCalcModal.querySelectorAll('input');
-    
+import getData from "./getData";
 
-    function getBalconType(balcon) {
-        const img = balcon.querySelector('img');
-        data.balconType = img.getAttribute('alt');
+const calc = (orderData) => {
+    const balconsImg = document.querySelectorAll('.balcon_icons_img img'),
+          inputWidth = document.querySelector('#width'),
+          inputHeight = document.querySelector('#height'),
+          windowProfile = document.querySelector('#view_type'),
+          lables = document.querySelectorAll('.label-glazing'),
+          checkboxes = document.querySelectorAll('.label-glazing input');
+
+    balconsImg.forEach(img => {
+        getData('click', img, 'type', orderData);
+    });
+
+    checkboxes.forEach((checkbox, i) => {
+        getData('change', checkbox, 'glazing', orderData, lables[i]);
+    });
+
+    getData('input', inputWidth, 'width', orderData);
+    getData('input', inputHeight, 'height', orderData);
+    getData('change', windowProfile, 'profile', orderData);
+
+    function refreshCheckBoxes() {
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
     }
 
-    function calcFormClear() {
-
-    }
-
-    balconsImg.forEach((balcon, i) => {
-        balcon.addEventListener('click', () => {
-            getBalconType(balcon);
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            refreshCheckBoxes();
+            checkbox.checked = true;
         });
     });
 
-    firstNextButton.addEventListener('click', (e) => {
-        const widthInput = firstCalcModal.querySelector('#width'),
-              heightInput = firstCalcModal.querySelector('#height');
-
-        data.width = widthInput.value;
-        data.height = heightInput.value;
-        
-    });
-
-    secondNextButton.addEventListener('click', () => {
-        const selectSpan = secondCalcModal.querySelector('#view_type'),
-              checkboxLabel = secondCalcModal.querySelectorAll('label');
-        
-        data.profile = selectSpan.value;
-
-        checkboxLabel.forEach(label => {
-            const checkboxSpan = label.querySelector('.checkbox-custom'),
-                  checkboxInput = label.querySelector('input');
-
-            if (checkboxInput.checked) {
-                data.typeGlazing = checkboxSpan.getAttribute('id');
-            }
-        });
-    });
 
 };
 
