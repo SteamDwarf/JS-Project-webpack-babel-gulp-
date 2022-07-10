@@ -70,7 +70,7 @@ const modals = (modalBtnSelector, modalElemSelector, modalCloseClass) => {
         }, time);
     }
     
-    //openModalByTime('.popup', 60000);
+    openModalByTime('.popup', 60000);
 };
 
 export default modals;

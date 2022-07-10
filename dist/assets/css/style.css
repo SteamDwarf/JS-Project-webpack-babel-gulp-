@@ -15,7 +15,18 @@ body {
 
 .status {
   display: block;
+}
+
+.loading {
+  color: rgb(52, 71, 213);
+}
+
+.error {
   color: red;
+}
+
+.success {
+  color: green;
 }
 
 a:hover {

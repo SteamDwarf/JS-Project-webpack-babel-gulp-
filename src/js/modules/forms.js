@@ -58,6 +58,7 @@ const forms = (dataClient) => {
             e.preventDefault();
             let messageElem = document.createElement('div');
             messageElem.classList.add('status');
+            messageElem.classList.add('loading');
             messageElem.textContent = message.load;
             form.append(messageElem);
 
@@ -84,10 +85,14 @@ const forms = (dataClient) => {
               Форма очищается и убирается сообщение*/
             const json = JSON.stringify(object);
 
-            postData('http://localhost:3000/requests', json)
+            postData('https://jsonplaceholder.typicode.com/users', json)
                 .then(() => {
+                    messageElem.classList.remove('loading');
+                    messageElem.classList.add('success');
                     messageElem.textContent = message.succesfull;
                 }).catch(() => {
+                    messageElem.classList.remove('loading');
+                    messageElem.classList.add('error');
                     messageElem.textContent = message.error;
                 }).finally(() => {
                     form.reset();

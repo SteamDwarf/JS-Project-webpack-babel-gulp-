@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     "use strict";
 
     let data = {};
-    let deadline = '2021-03-15';
+    let deadline = '2023-08-15';
 
     modals('.popup_engineer_btn', '.popup_engineer', 'popup_close');
     modals('.phone_link', '.popup', 'popup_close');
